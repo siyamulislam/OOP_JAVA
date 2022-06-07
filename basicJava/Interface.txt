@@ -1,0 +1,29 @@
+public class Main {
+	public static void main(String[] args) {
+	Mammal ob = new Mammal();
+	}  }
+class Mammal implements Animal,P{
+	Mammal(){
+		System.out.println("i and j"+i+" "+j);  }
+	@Override
+	public void eat() {	
+	}
+	@Override
+	public void travel() {	
+	}
+	@Override
+	public void G(){	
+	}
+}
+interface Animal{
+	int i= 100, j=200;
+	public void eat();
+	public void travel();
+}
+interface P{
+	public void G();
+}
+
+
+
+

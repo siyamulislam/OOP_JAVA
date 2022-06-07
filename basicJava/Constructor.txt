@@ -1,0 +1,22 @@
+public class Main {
+	public static void main(String[] args) {
+	A ob = new A(400,2);
+	A ob1 = new A(500);
+	ob.m();
+	ob1.m();
+	} }
+class A{
+	int var;
+	A(int a){
+		var = a;
+		System.out.println("hello I am a contructor");
+	}
+	A(int a, int b){
+		var = a;
+		System.out.println((a+b));
+	}
+	void m(){
+		System.out.println(var);
+	}
+	
+}

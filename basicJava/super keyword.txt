@@ -1,0 +1,19 @@
+public class Main {
+	public static void main(String[] args) {
+		B ob = new B();
+		 ob.me();
+	}
+}
+class A{
+	int b=100;
+void me2(){
+	System.out.println("I am superclass method");
+}
+	} 
+class B extends A{
+	void me(){
+		System.out.println("super class variable "+ super.b);
+	super.me2();
+	}
+}
+

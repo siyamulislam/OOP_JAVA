@@ -1,0 +1,23 @@
+public class Main {
+	public static void main(String[] args) {
+	
+	Bangladesh ob= new Bangladesh();
+	Bangladesh ob1= new Bangladesh(4);
+	Bangladesh ob2= new Bangladesh(10.6, 47);
+	
+	} 
+}
+class Bangladesh{
+	
+	Bangladesh(){
+System.out.println("Hello I am parameterless constructor");		
+	   }
+	Bangladesh(int a){
+System.out.println("Hello I am parameterized constructor");
+System.out.println("I have one value: "+ a);
+			}
+	Bangladesh(double f,int p){
+System.out.println("Hello I am parameterized constructor");
+System.out.println("I have two values: "+ f +" and "+p);
+			 }
+}

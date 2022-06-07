@@ -1,0 +1,87 @@
+class Testarray{  
+public static void main(String args[]){  
+  
+int a[]=new int[5];//declaration and instantiation  
+a[0]=10;//initialization  
+a[1]=20;  
+a[2]=70;  
+a[3]=40;  
+a[4]=50;  
+  
+//printing array  
+for(int i=0;i<a.length;i++)//length is the property of array  
+System.out.println(a[i]);  
+  
+}}  
+
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+
+class Testarray1{  
+public static void main(String args[]){  
+  
+int a[]={33,3,4,5};//declaration, instantiation and initialization  
+  
+//printing array  
+for(int i=0;i<a.length;i++)//length is the property of array  
+System.out.println(a[i]);  
+  
+}}  
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+
+class Testarray2{  
+static void min(int arr[]){  
+int min=arr[0];  
+for(int i=1;i<arr.length;i++)  
+ if(min>arr[i])  
+  min=arr[i];  
+  
+System.out.println(min);  
+}  
+  
+public static void main(String args[]){  
+  
+int a[]={33,3,4,5};  
+min(a);//passing array to method  
+  
+}}  
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+public class TestArray {
+
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+
+      // Print all the array elements
+      for (int i = 0; i < myList.length; i++) {
+         System.out.println(myList[i] + " ");
+      }
+     
+      // Summing all elements
+      double total = 0;
+      for (int i = 0; i < myList.length; i++) {
+         total += myList[i];
+      }
+      System.out.println("Total is " + total);
+      
+      // Finding the largest element
+      double max = myList[0];
+      for (int i = 1; i < myList.length; i++) {
+         if (myList[i] > max) max = myList[i];
+      }
+      System.out.println("Max is " + max);  
+   }
+}
+

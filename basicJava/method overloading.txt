@@ -1,0 +1,32 @@
+public class Main {
+	public static void main(String[] args) {
+	
+A ob = new A();
+
+ob.method();
+ob.method(540);
+ob.method("Bangladesh", 99.32, 120);
+		
+	} 
+}
+class A{
+	int a, g;
+	double b;
+	String w;	
+	void method(){
+System.out.println("I am parameterless method");		
+	}
+   void method(int a){
+	   this.a = a;
+System.out.println("I am parameterized method");
+System.out.println("I have one value: "+ a);
+	}
+    void method(String a, double b,int g){
+  w = a;
+  this.g = g;
+  this.b = b;
+System.out.println("I am parameterized method");
+System.out.println("I have three values: "+ a +" "+b+" "+g);   
+    }
+}
+

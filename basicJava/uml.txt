@@ -1,0 +1,129 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("\t\tCar");
+		
+		car ob= new car();
+		System.out.println("Enter speed");
+		ob.speed= scan.nextInt();
+		System.out.println("Enter num of door");
+		ob.numofdoor= scan.nextInt();
+		System.out.println("Enter size of engine");
+		ob.sizeofengine= scan.nextInt();
+		System.out.println("Enter Color");
+		ob.color=scan.next();
+		System.out.println("Enter licenceplate");
+		ob.licenceplate= scan.next();
+		System.out.println("Enter your derection(1.Left 2. Right)");
+		int a= scan.nextInt();
+		System.out.println(ob.color+" "+ob.numofdoor+" "+ob.licenceplate+" "+ob.speed+" "+ob.sizeofengine);
+		if(a==1) {
+			ob.turnLeft();
+		}
+		else {
+		ob.turnRight();
+		}
+
+		System.out.println("\t\tBicycle");
+		Bicycle ob1= new Bicycle();
+		System.out.println("Enter speed");
+		ob1.speed= scan.nextInt();
+		System.out.println("Enter Color");
+		ob1.color=scan.next();
+		System.out.println("want to Ring the bell then press 1");
+		int b = scan.nextInt();
+		if(b==1) {
+		ob1.ringBell();
+		}
+		System.out.println("\t\tMotor Cycle");
+		motorcycle ob2 = new motorcycle();
+		System.out.println("Enter speed");
+		ob2.speed= scan.nextInt();
+		System.out.println("Enter Color");
+		ob2.color=scan.next();
+		System.out.println("Enter licenceplate");
+		ob2.licenceplate= scan.next();
+		System.out.println("Enter size of engine");
+		ob2.sizeofengine= scan.nextInt();
+		System.out.println("Enter your derection(1.Left 2. Right)");
+		int c= scan.nextInt();
+		System.out.println(ob2.color+" "+ob2.licenceplate+" "+ob2.speed+" "+ob2.sizeofengine);
+		if(c==1) {
+			ob.turnLeft();
+		}
+		else {
+		ob.turnRight();
+		}
+		
+
+		}
+
+	}
+
+
+	class vehicle{
+		
+		int speed;
+		String color;
+		void turnLeft(){
+			System.out.println("left");
+			
+		}
+		void turnRight(){
+			System.out.println("right");
+			
+		}
+	}
+
+	class Bicycle extends vehicle{
+		void ringBell(){
+			System.out.println("ringbell");
+			
+		}
+	}
+
+	class motorcycle extends vehicle{
+		int sizeofengine;
+		String licenceplate;
+		public int getSizeofengine() {
+			return sizeofengine;
+		}
+		public void setSizeofengine(int sizeofengine) {
+			this.sizeofengine = sizeofengine;
+		}
+		public String getLicenceplate() {
+			return licenceplate;
+		}
+		public void setLicenceplate(String licenceplate) {
+			this.licenceplate = licenceplate;
+		}
+		
+	}
+
+	class motobike extends motorcycle{
+		void revengine(){
+			System.out.println("revengine");
+			
+		}
+	}
+
+	class car extends motorcycle{
+		int numofdoor;
+
+		public int getNumofdoor() {
+			return numofdoor;
+		}
+
+		public void setNumofdoor(int numofdoor) {
+			this.numofdoor = numofdoor;
+		}
+
+		void switchonaircon(){
+			System.out.println("aircon");
+			
+		}
+		
+	}

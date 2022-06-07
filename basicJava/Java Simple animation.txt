@@ -1,0 +1,38 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+public class Main implements ActionListener{  
+
+	static JButton b;
+	static ImageIcon i1;
+	static ImageIcon i2;
+	int flag= 0;
+	
+	public static void main(String args[]){  
+	JFrame f = new JFrame("I am a JFrame, a built in class in java");
+    f.setVisible(true);
+    f.setSize(1200,800);
+	b =  new JButton("I am a button, click me");
+	f.add(b);
+	i1 = new ImageIcon("C:\\Users\\Administrator\\Desktop\\a.jpg");
+	i2 = new ImageIcon("C:\\Users\\Administrator\\Desktop\\b.jpg");
+	Main ob = new Main();
+	b.addActionListener(ob);
+}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(flag==0){
+		b.setIcon(i1);
+		flag =1 ;
+		}
+		else if(flag==1){
+			b.setIcon(i2);
+			flag = 0;
+			}
+	}
+}  

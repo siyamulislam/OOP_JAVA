@@ -1,0 +1,19 @@
+public class Main {
+	public static void main(String[] args) {
+		B ob = new B();
+		ob.show();
+	}
+}
+class A{
+	int i=700, j=800;
+	void show(){            // this method is overrided
+		System.out.println("i,j: "+ i+" "+j);	
+	}
+}
+class B extends A{
+	int k=900;
+	void show(){
+		System.out.println("i,j and k: "+ i+" "+j+" "+k);
+	}
+}
+

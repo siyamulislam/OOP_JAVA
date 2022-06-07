@@ -1,0 +1,106 @@
+
+package inheritance;
+
+public class TestDemo {
+    
+    public static void main(String[] args) {
+        
+        Vehicle v1=new Vehicle();
+        Bicycle b1=new Bicycle();
+        MotorVehicle m1=new MotorVehicle();
+        MotorBike m2=new MotorBike();
+        Car c1=new Car();
+        v1.speed=70;
+        v1.colour=3;
+        System.out.println("Speed: "+v1.speed);
+        System.out.println("Speed: "+v1.colour);
+        v1.turnleft();
+        v1.turnright();
+        System.out.println("\n");
+        b1.ringBell();
+        System.out.println("\n");
+        m1.getSizeOfEngine();
+        m1.getlicencePlate();
+        System.out.println("\n");
+        m2.newEngine();
+        System.out.println("\n");
+        c1.getNumberOfDoors();
+        c1.switchOfAircon();
+        
+        
+        
+    }
+    
+}
+
+public class Vehicle {
+    
+     int speed;
+    int colour;
+    
+    void turnleft()
+    {
+        System.out.println("Turnleft");
+    }
+    void turnright(){
+        System.out.println("Turnright");
+    }
+    
+    
+}
+
+public class Bicycle extends Vehicle {
+    
+    void ringBell(){
+        System.out.println("RingBell");
+    }
+    
+}
+
+public class MotorVehicle extends Vehicle {
+    
+    int sizeOfEngine;
+    String licencePlate;
+    
+    void getSizeOfEngine(){
+        sizeOfEngine=324;
+        System.out.println("Size Of Engine: "+sizeOfEngine);
+    }
+    void getlicencePlate(){
+        licencePlate="Dhaka232343";
+        System.out.println("Licence: "+licencePlate);
+    }
+    
+}
+
+public class MotorBike extends MotorVehicle {
+    
+    void newEngine(){
+        System.out.println("NewEngine");
+    }
+    
+}
+
+public class Car extends MotorVehicle {
+    
+    int numberOfDoors;
+    
+    
+    void switchOfAircon(){
+        System.out.println("SwitchOfAirCon");
+    }
+    
+    void getNumberOfDoors(){
+        
+        
+        numberOfDoors=4;
+        
+        System.out.println("Number Of Doors: "+numberOfDoors);
+    }
+    
+}
+
+
+
+
+

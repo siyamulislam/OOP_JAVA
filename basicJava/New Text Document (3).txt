@@ -1,0 +1,60 @@
+package pkgnewnew;
+
+
+public class New {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        MotorVehicle obj=new MotorVehicle();
+        obj.getsizeofEngine();
+        Bicyle obj2=new  Bicyle();
+        obj2.ringBell();
+        Car obj3 =new Car();
+        obj3.getNumberofDoors();
+        obj3.turnRight();
+        MotorBike obj4=new MotorBike();
+        obj4.revEngine();
+        obj4.turnLeft();
+    }
+    
+}
+class Vehicle{
+    int speed;
+    int color;
+    void turnLeft(){
+        System.out.println("turnLeft");
+    }
+    void turnRight(){
+        System.out.println("TurnRight");
+    }
+}
+class Bicyle extends Vehicle{
+    void ringBell(){
+        System.out.println("ringBell");
+    }
+}
+class MotorVehicle extends Vehicle{
+    int  sizeofEngine;
+    String licenceplate;
+    void getsizeofEngine(){
+        sizeofEngine=309;
+        System.out.println("Sizeof Engine: "+sizeofEngine);
+    }
+    void getlicenceplate(){
+        licenceplate="licence";
+    }
+}
+class MotorBike extends MotorVehicle{
+    void revEngine(){
+        System.out.println("revengine");
+    }
+    void switchonAir(){
+        System.out.println("switchonAir");
+    }
+}
+class Car extends MotorVehicle{
+    int numberofDoors=5;
+    void getNumberofDoors(){
+        System.out.println("Number of doors: "+numberofDoors);
+    }
+}

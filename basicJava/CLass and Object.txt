@@ -1,0 +1,23 @@
+public class Rectangle {
+	public static void main(String[] args) {
+		System.out.println("Hello");	
+		A ob = new A();
+		B ob1 = new B();
+		ob.M();
+ob.area(10,20,"Duster");
+ob1.m();
+	} }
+class A{
+	void area(int length, int width,String fig){
+		int area = length * width;	
+		System.out.println("Area of: "+ fig+" is " +area);
+		}
+void M(){
+	B ob = new B();
+	ob.m();
+}}
+class B{
+	void m(){
+		System.out.println("I am class B's method");
+	}
+}

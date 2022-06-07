@@ -1,0 +1,18 @@
+public class Main {
+	public static void main(String[] args) {
+	
+A ob = new A();
+	System.out.println(ob.a + ob.b + ob.c);	
+	B ob2 = new B();
+	System.out.println( ob2.a);
+	} 
+}
+class A extends B{
+	int b= 1200;
+}
+class B extends C{
+	int a= 100;
+}
+class C{
+	int c =450;
+}
